@@ -1,7 +1,7 @@
 export interface Message {
   id: string;
   content: string;
-  sender: 'user' | 'bot';
+  sender: "user" | "bot";
   timestamp: Date;
 }
 
@@ -26,8 +26,16 @@ export interface User {
   id: string;
   name: string;
   email: string;
-  avatar: string;
+  avatar?: string;
   role: string;
+}
+
+export interface Notification {
+  id: string;
+  title: string;
+  message: string;
+  timestamp: Date;
+  read: boolean;
 }
 
 export interface LoginCredentials {
